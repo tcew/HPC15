@@ -40,7 +40,15 @@ void solve(int N, datafloat tol, datafloat *h_rhs, datafloat *h_res, datafloat *
   occa::kernel jacobi = device.buildKernelFromSource("jacobi.okl", "jacobi", flags);
 
   // build partial reduction kernel
-  occa::kernel partialReduce = device.buildKernelFromSource("partialReduce.occa", "partialReduce", flags);
+  occa::kernel partialReduce = device.buildKernelFromSource("partialReduce.okl", "partialReduce", flags);
+
+  int Nred = ((N+2)*(N+2) + BDIM-1)/BDIM; // number of blocks for partial reduction
+  {
+    int dims = 1;
+    occa::dim inner(BDIM);
+    occa::dim outer(Nred);
+    partialReduce.setWorkingDims(dims, inner, outer);
+  }
 
   // build Device Arrays and transfer data from host arrays
   size_t sz = (N+2)*(N+2)*sizeof(datafloat);
@@ -68,6 +76,7 @@ void solve(int N, datafloat tol, datafloat *h_rhs, datafloat *h_res, datafloat *
     {
       // design thread array for norm(u-u2)
       int N2 = (N+2)*(N+2);
+      int Nred = (N2+BDIM-1)/BDIM;
 
       partialReduce(N2, c_u, c_u2, c_res);
 

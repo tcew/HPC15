@@ -20,13 +20,12 @@ kernel void jacobi(const int N,
 		   const datafloat *rhs,
 		   const datafloat *u,
 		   datafloat *newu){
-#define blk 16
 
-  for(int start1=0; start1<N; start1+=blk; outer1){
-    for(int start0=0; start0<N; start0+=blk; outer0){
+  for(int start1=0; start1<N; start1+=BY; outer1){
+    for(int start0=0; start0<N; start0+=BX; outer0){
       
-      for(int j=start1; j<start1+blk; ++j; inner1){
-	for(int i=start0; i<start0+blk; ++i; inner0){
+      for(int j=start1; j<start1+BY; ++j; inner1){
+	for(int i=start0; i<start0+BX; ++i; inner0){
 
 	  if((i < N) && (j < N)){
 	    
