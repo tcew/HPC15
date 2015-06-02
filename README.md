@@ -8,7 +8,7 @@ Running on davinci
 <ul>
 <li> Grab a copy of OCCA:
 
-<br><i> git clone https://github.com/tcew/OCCA2 </i>
+<br><i> git clone https://github.com/tcew/OCCA2 </i><br>
 </li>
 <li> Tell OCCA where it lives by editing ~/.bashrc
 
@@ -24,7 +24,7 @@ Running on davinci
 
 <li> Request a GPU node on davinci:
 
-<br><br><i>qsub -I -l nodes=1:ppn=12:gpu,walltime=00:30:00 -W group_list=k2i -q classroom</i>
+<br><br><i>qsub -I -l nodes=1:ppn=12:gpu,walltime=00:30:00 -W group_list=k2i -q classroom</i><br>
 </ul>
 
 <br><b>On GPU node:</b>
