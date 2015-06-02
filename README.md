@@ -7,7 +7,7 @@ Running on davinci
  
 1. Grab a copy of OCCA:
 
-<it> git clone https://github.com/tcew/OCCA2 </it>
+<i> git clone https://github.com/tcew/OCCA2 </i>
 
 2. Tell OCCA where it lives by editing ~/.bashrc
 
