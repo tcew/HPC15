@@ -1,6 +1,8 @@
 # HPC15
 Tutorial for the K2I 2015 summer institute on accelerators
 
+You can download these instructions from here: <href = "https://docs.google.com/document/d/1MlCNaafyRPZFYUUYSiHnPk-QgFxzO_5pGyZAuTI75-8/edit?usp=sharing"> link</href>
+
 Running on davinci
 
 <b> On davinci login node </b>:
