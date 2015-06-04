@@ -1,7 +1,7 @@
 # HPC15
 Tutorial for the K2I 2015 summer institute on accelerators
 
-You can download these instructions from here: <href = "https://docs.google.com/document/d/1MlCNaafyRPZFYUUYSiHnPk-QgFxzO_5pGyZAuTI75-8/edit?usp=sharing"> link</href>
+You can download these instructions from here: <a href = "https://docs.google.com/document/d/1MlCNaafyRPZFYUUYSiHnPk-QgFxzO_5pGyZAuTI75-8/edit?usp=sharing"> link</a>
 
 Running on davinci
 
