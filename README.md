@@ -14,7 +14,7 @@ Running on davinci
 </li>
 <br><li> Tell OCCA where it lives by editing ~/.bashrc
 
-<br><br><i>export OCCA_DIR=/home/username/OCCA2</i>
+<br><br><i>export OCCA_DIR=$HOME/OCCA2</i>
 <br><i>export PATH=$PATH:$OCCA_DIR/bin</i>
 <br><i>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OCCA_DIR/lib</i>
 </li>
