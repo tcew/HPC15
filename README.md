@@ -30,16 +30,22 @@ Running on davinci
 <br><b>On GPU node:</b>
 
 <ul>
+
+<li> Set up terminal session for CUDA and OpenCL (sets path and library path): 
+
+<br><br><i>module load cuda</it><br>
+
+</li>
+
 <li> Build OCCA (on the GPU node): 
 
 <br><br><i>module load cuda</it>
-<br><i>module load gcc</i>
 <br><i>cd OCCA</i>
 <br><i>make -j</i>
 
 </li>
 
-<br><li> Test OCCA (on the GPU node):
+<br><li> Test OCCA (should report all compute devices on all thread models detected):
 
 <br><br><i>occainfo</i>
  
